@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger Kitty Apps</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .hidden-info {
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function revealInfo() {
+            document.getElementById('hiddenInfo').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="Tiger Kitty Apps Logo">
+        </div>
+        <button class="button" onclick="revealInfo()">Delete User Account Request</button>
+        <div id="hiddenInfo" class="hidden-info">
+            <p>Please email <a href="mailto:tigerkittyapps@gmail.com">tigerkittyapps@gmail.com</a> and request for account deletion. You must provide the email associated with the account you signed up with.</p>
+        </div>
+    </div>
+</body>
+</html>
